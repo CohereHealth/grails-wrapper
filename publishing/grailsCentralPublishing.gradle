@@ -38,12 +38,12 @@ publishing {
 
             if(group == 'org.grails.plugins') {
                 if(version.endsWith('-SNAPSHOT')) {
-                    url "https://repo.grails.org/grails/plugins3-snapshots-local"
+                    url "https://repo.grails.org/artifactory/plugins3-snapshots-local"
                 }
             }
             else {
                 if(version.endsWith('-SNAPSHOT')) {
-                    url "https://repo.grails.org/grails/libs-snapshots-local"
+                    url "https://repo.grails.org/artifactory/libs-snapshots-local"
                 }
             }
         }

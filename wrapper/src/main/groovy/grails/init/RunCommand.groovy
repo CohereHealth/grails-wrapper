@@ -25,7 +25,7 @@ class RunCommand {
 
         GroovyClassLoader groovyClassLoader = new GroovyClassLoader(RunCommand.classLoader)
 
-        List<RepositoryConfiguration> repositoryConfigurations = [new RepositoryConfiguration("grailsCentral", new URI("https://repo.grails.org/grails/core"), true)]
+        List<RepositoryConfiguration> repositoryConfigurations = [new RepositoryConfiguration("grailsCentral", new URI("https://repo.grails.org/artifactory/core"), true)]
         if (groovyVersion && groovyVersion.endsWith("SNAPSHOT")) {
             repositoryConfigurations.add(new RepositoryConfiguration("JFrog OSS snapshot repo", new URI("https://oss.jfrog.org/oss-snapshot-local"), true))
         }

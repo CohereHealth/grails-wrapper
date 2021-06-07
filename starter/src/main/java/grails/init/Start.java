@@ -19,7 +19,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 public class Start {
 
     private static final String PROJECT_NAME = "grails4_1-wrapper";
-    private static final String BASE_URL = "http://repo.grails.org/grails/core/org/grails/" + PROJECT_NAME;
+    private static final String BASE_URL = "https://repo.grails.org/artifactory/core/org/grails/" + PROJECT_NAME;
     private static final File WRAPPER_DIR = new File(System.getProperty("user.home") + "/.grails/wrapper");
     private static final File NO_VERSION_JAR = new File(WRAPPER_DIR, PROJECT_NAME + ".jar");
 
@@ -33,6 +33,7 @@ public class Start {
             return findReleaseHandler.getVersion();
         } catch (Exception e) {
             if (!NO_VERSION_JAR.exists()) {
+                System.out.println(BASE_URL + "/maven-metadata.xml");
                 System.out.println("You must be connected to the internet the first time you use the Grails wrapper");
                 e.printStackTrace();
                 System.exit(1);
